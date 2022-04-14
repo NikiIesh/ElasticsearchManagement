@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-_2#kqm-s5&n!61%4^&s+d+(pdf_%=ly*txan@*^#u_b2-n$61y
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0']
 
 
 # Application definition
@@ -87,7 +87,7 @@ WSGI_APPLICATION = 'samplefullstack.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
-        'NAME':'ReqUrl'
+        'NAME':'Url'
     }
 }
 
