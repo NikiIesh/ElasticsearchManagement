@@ -6,6 +6,35 @@ from django.http.response import HttpResponse
 import json
 import pymongo
 
+class NodeInfo(APIView):
+
+    def get(self, request, *args, **kwargs):
+        es = Elasticsearch("http://127.0.0.1:9200")
+        id=kwargs['id']
+        res = es.nodes.info(node_id=id)
+        return Response(str(res))
+class Health(APIView):
+
+    def get(self, request, *args, **kwargs):
+        es = Elasticsearch("http://127.0.0.1:9200")
+        # id=kwargs['id']
+        res = es.cluster.health()
+        return Response(str(res))
+class Stats(APIView):
+
+    def get(self, request, *args, **kwargs):
+        es = Elasticsearch("http://127.0.0.1:9200")
+        # id=kwargs['id']
+        res = es.cluster.stats()
+        return Response(str(res))
+
+class Indices(APIView):
+
+    def get(self, request, *args, **kwargs):
+        es = Elasticsearch("http://127.0.0.1:9200")
+        # id=kwargs['id']
+        res = es.indices.get_alias().keys()
+        return Response(str(res))
 
 class BackendList(APIView):
 

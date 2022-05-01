@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-_2#kqm-s5&n!61%4^&s+d+(pdf_%=ly*txan@*^#u_b2-n$61y
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0','10.81.1.224']
+ALLOWED_HOSTS = ['0.0.0.0','10.81.1.224','127.0.0.1']
 
 
 # Application definition
